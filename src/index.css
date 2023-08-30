@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes growAndShrink {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 600ms linear forwards;
+}
+
+.grow-animation {
+  position: absolute;
+  pointer-events: none;
+  animation: growAndShrink 600ms ease-in-out forwards;
+}
